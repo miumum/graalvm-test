@@ -25,7 +25,7 @@ class JsValueAssertionsTest extends AbstractGraalvmTest {
 
     @Test
     public void isJsDateThatNotJsDateTest() {
-        var exception = Assertions.assertThrows(AssertionError.class, () -> {
+        Throwable exception = Assertions.assertThrows(AssertionError.class, () -> {
             Value value = evalJavascript("'some string'");
             JsValueAssertions.assertThat(value).isJsDateThat();
         });

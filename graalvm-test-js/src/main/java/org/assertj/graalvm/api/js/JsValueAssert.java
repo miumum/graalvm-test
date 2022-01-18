@@ -3,6 +3,7 @@ package org.assertj.graalvm.api.js;
 import java.time.Instant;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.assertj.core.api.AbstractAssert;
@@ -35,12 +36,13 @@ public class JsValueAssert extends ValueAssert {
 
     public JsDateAssert isJsDateThat() {
         assertThatCode(() -> {
-            Map<String, Object> bindings = Map.of("dateVar", actual);
-            var script = "if(dateVar instanceof Date === false) throw new Error(`the value '${dateVar}' not a javascript date`)";
+            Map<String, Object> bindings = new HashMap<>();
+            bindings.put("dateVar", actual);
+            String script = "if(dateVar instanceof Date === false) throw new Error(`the value '${dateVar}' not a javascript date`)";
             evalJavascript(script, bindings);
         })
                 .doesNotThrowAnyException();
-        var time = actual.getMember("getTime").execute().asLong();
+        long time = actual.getMember("getTime").execute().asLong();
         return new JsDateAssert(ZonedDateTime.ofInstant(Instant.ofEpochMilli(time), ZoneOffset.UTC));
     }
 

@@ -99,7 +99,7 @@ public class ValueMatchers {
      * @return <code>null</code>
      */
     public static Value matches(Pattern pattern) {
-        var valueMatcher = new ValueMatcher("matches",
+        ValueMatcher valueMatcher = new ValueMatcher("matches",
                 arg -> !arg.isNull() && pattern.matcher(arg.asString()).matches());
         return argThat(valueMatcher);
     }
@@ -110,7 +110,7 @@ public class ValueMatchers {
      * @return <code>null</code>
      */
     public static Value isNull() {
-        var valueMatcher = new ValueMatcher("isNull", Value::isNull);
+        ValueMatcher valueMatcher = new ValueMatcher("isNull", Value::isNull);
         return argThat(valueMatcher);
     }
 
@@ -120,7 +120,7 @@ public class ValueMatchers {
      * @return <code>null</code>
      */
     public static Value isNotNull() {
-        var valueMatcher = new ValueMatcher("isNotNull", arg -> !arg.isNull());
+        ValueMatcher valueMatcher = new ValueMatcher("isNotNull", arg -> !arg.isNull());
         return argThat(valueMatcher);
     }
 
