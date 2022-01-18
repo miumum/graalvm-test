@@ -1,6 +1,7 @@
 package org.assertj.graalvm.api.js;
 
 import java.time.ZoneOffset;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.graalvm.polyglot.Context;
@@ -37,7 +38,7 @@ public abstract class AbstractGraalvmTest {
      * @return the result of evaluation
      */
     protected Value evalJavascript(String sourceCode) {
-        return evalJavascript(sourceCode, Map.of());
+        return evalJavascript(sourceCode, new HashMap<>());
     }
 
     /**
