@@ -4,23 +4,32 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>graalvm-test</artifactId>
-        <groupId>com.miumum</groupId>
+        <groupId>com.github.miumum</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>graalvm-test-js</artifactId>
+
+    <name>graalvm-test-js</name>
+    <url>https://github.com/miumum/graalvm-test</url>
+    <description>
+        The assertj utilities for fluent assertion of graalvm Value representing the evaluation
+        result of javascrit as a hosted language.
+    </description>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.graalvm.js</groupId>
             <artifactId>js</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.miumum</groupId>
-            <artifactId>graalvm-test-assertj</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.miumum</groupId>
+            <groupId>com.github.miumum</groupId>
             <artifactId>graalvm-test-assertj</artifactId>
         </dependency>
 
@@ -32,9 +41,11 @@
         </dependency>
     </dependencies>
 
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
 
 </project>

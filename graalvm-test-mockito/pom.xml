@@ -4,12 +4,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>graalvm-test</artifactId>
-        <groupId>com.miumum</groupId>
+        <groupId>com.github.miumum</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>graalvm-test-mockito</artifactId>
+    <name>graalvm-test-js</name>
+    <url>https://github.com/miumum/graalvm-test</url>
+    <description>
+        The mockito matcher which can be used to mock classes and interfaces which has methods
+        accepting graalvm Value as a parameter.
+    </description>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.graalvm.sdk</groupId>
@@ -28,9 +40,11 @@
         </dependency>
     </dependencies>
 
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
 
 </project>
