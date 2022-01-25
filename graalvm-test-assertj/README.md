@@ -1,7 +1,7 @@
 # graalvm-test-assertj
 
-The [assertj](https://assertj.github.io/doc/) utilities for fluent assertion of
-graalvm [`Value`](https://www.graalvm.org/sdk/javadoc/org/graalvm/polyglot/Value.html)
+The <a href="https://assertj.github.io/doc/" target="_blank">assertj</a> utilities for fluent assertion of
+graalvm <a href="https://www.graalvm.org/sdk/javadoc/org/graalvm/polyglot/Value.html" target="_blank">`Value`</a>
 
 ## Set up dependency
 

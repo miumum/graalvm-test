@@ -1,7 +1,7 @@
 # graalvm-test-mockito
 
-The [mockito](https://site.mockito.org/) matcher which can be used to mock classes and interfaces which has methods
-accepting graalvm [`Value`](https://www.graalvm.org/sdk/javadoc/org/graalvm/polyglot/Value.html) as a parameter.
+The <a href="https://site.mockito.org/" target="_blank">mockito</a> matcher which can be used to mock classes and interfaces which has methods
+accepting graalvm <a href="https://www.graalvm.org/sdk/javadoc/org/graalvm/polyglot/Value.html" target="_blank">`Value`</a> as a parameter.
 
 ## Set up dependency
 
